@@ -14,17 +14,14 @@
           padding: 20px 80px;
       }
 
-      .links {
-      float: left;
-      width: 200px;
-      }
-
       #container {
         display:flex
       }
   </style>
 </head>
 <body>
+  <script src="index.js"></script>
+
     <!-- Simple header with scrollable tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
@@ -35,7 +32,7 @@
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
       <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Erstgespräch</a>
-      <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">Protokoll eintragen</a>
       <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
       <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
     </div>
@@ -48,10 +45,10 @@
     <!--==========================================================================-->
     <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
       <div class="page-content"><!-- Your content goes here -->
-        <!-- Textfield with Floating Label -->
 
     <h3>Erstgespräch Lerncoaching und Beratung</h3>
 
+    <!-- Textfield with Floating Label -->
     <form action="#" onkeyup="onChange()">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="firstNameField">
@@ -201,16 +198,19 @@
     <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
 
     <!-- Colored raised button -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendInfos()">
+  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendInfos()">
   Abschicken
-</button>
+  </button>
       </div>
     </section>
 
 
     <!--==========================================================================-->
     <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
+      <div class="page-content"><!-- Your content goes here -->
+
+        <h3>Protokoll eintragen</h3>
+      </div>
     </section>
 
 
@@ -227,7 +227,5 @@
 </div>
 
 
-    
-    <script src="index.js"></script>
 </body>
 </html>
