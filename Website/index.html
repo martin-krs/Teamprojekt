@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webseite</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <style>
+      .page-content{
+          padding: 20px 80px;
+      }
+
+      .links {
+      float: left;
+      width: 200px;
+      }
+
+      #container {
+        display:flex
+      }
+  </style>
+</head>
+<body>
+    <!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Webseite</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Erstgespräch</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+      <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+      <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div>
+  <main class="mdl-layout__content">
+
+    <!--==========================================================================-->
+    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+      <div class="page-content"><!-- Your content goes here -->
+        <!-- Textfield with Floating Label -->
+
+    <h3>Erstgespräch Lerncoaching und Beratung</h3>
+
+    <form action="#" onkeyup="onChange()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="firstNameField">
+        <label class="mdl-textfield__label" for="firstNameField">Vorname...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="lastNameField">
+          <label class="mdl-textfield__label" for="lastNameField">Nachname...</label>
+        </div>
+    </form>
+    <form action="#" onkeyup="onChange()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="homeField">
+        <label class="mdl-textfield__label" for="homeField">Wohnort...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ageField">
+          <label class="mdl-textfield__label" for="ageField">Alter...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+    </form>
+    <form action="#" onkeyup="onChange()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="emailField">
+        <label class="mdl-textfield__label" for="emailField">Email...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="teleField">
+          <label class="mdl-textfield__label" for="teleField">Telefon...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+    </form>
+
+    <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
+    
+    <form action="#" onkeyup="onChange()">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="degreeField">
+        <label class="mdl-textfield__label" for="degreeField">Studiengang...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="fachsemesterField">
+          <label class="mdl-textfield__label" for="fachsemesterField">Fachsemester...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="studiensemesterField">
+          <label class="mdl-textfield__label" for="studiensemesterField">Studiensemester...</label>
+        </div>
+    </form>
+
+    <strong>Studiert in Regelstudienzeit?</strong>
+    <div onclick="onChange()">
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="studyTime1">
+      <input type="radio" id="studyTime1" class="mdl-radio__button" name="options" value="ja">
+      <span class="mdl-radio__label">Ja</span>
+    </label>
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="studyTime2">
+      <input type="radio" id="studyTime2" class="mdl-radio__button" name="options" value="nein">
+      <span class="mdl-radio__label">Nein</span>
+    </label>
+  </div>
+
+    <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
+
+    <strong>Vom Lerncoaching erfahren durch:</strong>
+    <div id="container" onclick="onChange()">
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+      <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="boxes1" value="Flyer, Aushang">
+      <span class="mdl-checkbox__label">Flyer, Aushang</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+      <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="boxes1" value="Internetseite">
+      <span class="mdl-checkbox__label">Internetseite</span>
+    </label>
+  </div>
+  <div id="container" onclick="onChange()"> 
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+      <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="boxes1" value="Rundmail durch Lerncoach">
+      <span class="mdl-checkbox__label">Rundmail durch Lerncoach</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+      <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="boxes1" value="Fachlicher Vortrag, Präsentation">
+      <span class="mdl-checkbox__label">Fachlicher Vortrag, Präsentation</span>
+    </label>
+  </div>
+  <div id="container" onclick="onChange()"> 
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
+      <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="boxes1" value="Vorstellung in Lehrveranstaltung">
+      <span class="mdl-checkbox__label">Vorstellung in Lehrveranstaltung</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
+      <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="boxes1" value="Kommilitonen/Kommilitoninnen">
+      <span class="mdl-checkbox__label">Kommilitonen/Kommilitoninnen</span>
+    </label>
+  </div>
+  <form action="#" onkeyup="onChange()">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="personalAdviseField">
+      <label class="mdl-textfield__label" for="personalAdviseField">Persönlicher Hinweis von...</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="otherInfos1Field">
+      <label class="mdl-textfield__label" for="otherInfos1Field">Sonstiges...</label>
+    </div>
+  </form>
+
+
+  <strong>Bisherige Erfahrungen mit anderen Beratungsangeboten:</strong>
+    <div id="container" onclick="onChange()">
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-7">
+      <input type="checkbox" id="checkbox-7" class="mdl-checkbox__input" name="boxes2" value="Allgemeine Studienberatung">
+      <span class="mdl-checkbox__label">Allgemeine Studienberatung</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-8">
+      <input type="checkbox" id="checkbox-8" class="mdl-checkbox__input" name="boxes2" value="Sozialberatung des Studentenwerks">
+      <span class="mdl-checkbox__label">Sozialberatung des Studentenwerks</span>
+    </label>
+  </div>
+  <div id="container" onclick="onChange()"> 
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-9">
+      <input type="checkbox" id="checkbox-9" class="mdl-checkbox__input" name="boxes2" value="Fachstudienberatung der Fakultät">
+      <span class="mdl-checkbox__label">Fachstudienberatung der Fakultät</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-10">
+      <input type="checkbox" id="checkbox-10" class="mdl-checkbox__input" name="boxes2" value="Career Service">
+      <span class="mdl-checkbox__label">Career Service</span>
+    </label>
+  </div>
+  <div id="container" onclick="onChange()"> 
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-11">
+      <input type="checkbox" id="checkbox-11" class="mdl-checkbox__input" name="boxes2" value="PBS">
+      <span class="mdl-checkbox__label">Psychotherapeutische Beratungsstelle des Studentenwerks (PBS)</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-12">
+      <input type="checkbox" id="checkbox-12" class="mdl-checkbox__input" name="boxes2" value="Nichts davon">
+      <span class="mdl-checkbox__label">Nichts davon</span>
+    </label>
+  </div>
+  <form action="#" onkeyup="onChange()">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="otherInfos2Field">
+      <label class="mdl-textfield__label" for="otherInfos2Field">Sonstiges...</label>
+    </div>
+  </form>
+
+
+    <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
+
+    <!-- Colored raised button -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendInfos()">
+  Abschicken
+</button>
+      </div>
+    </section>
+
+
+    <!--==========================================================================-->
+    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+
+
+    <!--==========================================================================-->
+    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+
+      <!--==========================================================================-->
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+</div>
+
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
