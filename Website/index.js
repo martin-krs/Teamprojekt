@@ -93,3 +93,7 @@ function sendInfos() {
   alert("Infos wurden abgeschickt.");
   // SQL-Querry hinzufügen
 }
+
+function sendProtokoll() {
+  alert("Protokoll abgeschickt");
+}

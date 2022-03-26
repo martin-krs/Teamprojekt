@@ -198,10 +198,11 @@
     <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
 
     <!-- Colored raised button -->
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendInfos()">
-  Abschicken
-  </button>
-      </div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendInfos()">
+    Abschicken
+    </button>
+
+    </div>
     </section>
 
 
@@ -210,6 +211,74 @@
       <div class="page-content"><!-- Your content goes here -->
 
         <h3>Protokoll eintragen</h3>
+
+        <div id="container">
+        <strong>Anliegenkategorie:</strong>
+        <select id="choice">
+          <option>––––</option>
+          <option value="Organisation des Studiums">Organisation des Studiums</option>
+          <option value="Individuelle Arbeitsorgansiation">Individuelle Arbeitsorgansiation</option>
+          <option value="Eigenverantwortliches Lernen /Selbstmanagement">Eigenverantwortliches Lernen /Selbstmanagement</option>
+          <option value="Motivation">Motivation</option>
+          <option value="Prokrastination">Prokrastination</option>
+          <optgroup label="Studienphase">
+            <option value="Studienbeginn">Studienbeginn</option>
+            <option value="Wechsel an Ostfalia">Wechsel an Ostfalia</option>
+            <option value="Wiederaufnahme des Studiums">Wiederaufnahme des Studiums</option>
+        </optgroup>
+        <optgroup label="Prüfungsangelegenheiten">Prüfungsangelegenheiten
+            <option value="Kontakt zu Prüfungsausschuss oder Dozenten">Kontakt zu Prüfungsausschuss oder Dozenten</option>
+            <option value="Anerkennung von Leistungen">Anerkennung von Leistungen</option>
+            <option value="Nachteilsausgleich">Nachteilsausgleich</option>
+        </optgroup>
+        <option value="Prüfungsvorbereitung">Prüfungsvorbereitung</option>
+        <option value="Prüfungsangst">Prüfungsangst</option>
+        <option value="Letzprüfung">Letzprüfung</option>
+        <option value="Studienabbruch/Exmatrikulation">Studienabbruch/Exmatrikulation</option>
+        <option value="Vereinbarkeit von Studium und Privatem">Vereinbarkeit von Studium und Privatem</option>
+        <optgroup label="––––––––––––––––––––––––––––"></optgroup>
+        <option value="Persönliches Umfeld">Persönliches Umfeld</option>
+        <option value="Beziehung zu Mitmenschen">Beziehung zu Mitmenschen</option>
+        <option value="Tragische Ereignisse, akute Krise">Tragische Ereignisse, akute Krise</option>
+        <option value="Lebenswegplanung">Lebenswegplanung</option>
+        <option value="Finanzielle Sorgen">Finanzielle Sorgen</option>
+        <option value="Körperliche Erkrankung">Körperliche Erkrankung</option>
+        <optgroup label="Stresserleben">
+          <option value="körperlich">körperlich</option>
+          <option value="psychisch">psychisch</option>
+        </optgroup>
+        <option value="Sexualität/Gender">Sexualität/Gender</option>
+        <optgroup label="Verdacht psychische und Verhaltenssörung">
+          <option value="Depression">Depression</option>
+          <option value="Zwänge">Zwänge</option>
+          <option value="Psychosen">Psychosen</option>
+          <option value="Essstörung">Essstörung</option>
+          <option value="Angststörungen">Angststörungen</option>
+          <option value="Panikstörung">Panikstörung</option>
+          <option value="ADS/ADHS">ADS/ADHS</option>
+          <option value="Autismus">Autismus</option>
+          <option value="Persönlichkeitsstörung">Persönlichkeitsstörung</option>
+          <option value="Somatisierungsstörung">Somatisierungsstörung</option>
+          <option value="Suizidalität">Suizidalität</option>
+          <option value="Süchte">Süchte</option>
+          <option value="sonstige">sonstige</option>
+        </optgroup>
+        <option value="Sonstiges">Sonstiges</option>
+        </select>
+      </div>
+
+        <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
+
+        <strong>Notizen:</strong>
+        <textarea name="justtext" id="justtext"></textarea>
+
+        <hr style="border-width: 3px; border-color:rgba(0, 0, 0, 0.5)">
+
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="sendButton" onclick="sendProtokoll()">
+        Abschicken
+        </button>
+
       </div>
     </section>
 
